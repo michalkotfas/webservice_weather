@@ -12,9 +12,17 @@ namespace Klient
     {
         static void Main(string[] args)
         {
-            string country = "Poland";
-            string city = "Gdansk";
-            
+            string country;
+            string city;
+
+            Console.WriteLine("PROGRAM KTORY DLA PODANEGO MIASTA W DANYM PANSTWIE\nSPRAWDZA BIERZACA TEMPERATURE\n");
+            Console.WriteLine("Wpisz nazwe kraju (np. Poland): ");
+            country = Console.ReadLine();
+            Console.WriteLine("\n");
+            Console.WriteLine("Wpisz nazwe miasta (np. Gdansk):  ");
+            city = Console.ReadLine();
+            Console.WriteLine("\n");
+
             GlobalWeather.GlobalWeatherSoapClient serwis = new GlobalWeather.GlobalWeatherSoapClient("GlobalWeatherSoap12");
             serwis.Open();
             
